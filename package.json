@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "lightbox2": "^2.11.1",
+    "lozad": "^1.14.0",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.4.0"
   }

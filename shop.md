@@ -20,7 +20,7 @@ permalink: /shop/
   <div class="w-64 px-3 bg">
     <div class="bg-white rounded-lg my-4 overflow-hidden border shadow-lg">
       <div>
-      <a data-fancybox="gallery" href="{{ product.image_path }}"><img class="h-48 w-full object-cover object-top" src="{{ product.image_path }}"></a>
+      <a data-fancybox="gallery" href="{{ product.image_path }}"><img class="h-48 w-full object-cover object-top lozad image-to-load-first" src="{{ product.image_path }}" data-src="{{ product.image_path }}"></a>
       </div>
       <div>
         <div>

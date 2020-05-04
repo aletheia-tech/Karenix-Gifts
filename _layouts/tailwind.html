@@ -4,12 +4,10 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-gray-100 antialiased text-gray-900 static">
 <head>
-  <link href="{{ site.url }}/css/tailwind-build.css" rel="stylesheet" />
-{% include head.html%}
+  {% include head.html%}
 </head>
 
 <body>
-  {% include base.html %}
   {% include api.html %}
   {% include primary-nav.html %}
   {{ content }}

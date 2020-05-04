@@ -13,9 +13,9 @@ excerpt_separator: <!--more-->
 data-item-id="heart-key-ring" 
 data-item-price="20"
 data-item-url="https://www.karenix.com/shop"
-data-item-description="Heart Key Ring with Tag, Silver Plated"
+data-item-description="{{ page.description }}"
 data-item-image="{{page.image_path}}"
-data-item-name="Heart Key Ring"
+data-item-name="{{page.title}}"
 data-item-custom10-name="Age (optional)"
 data-item-custom11-name="First Name"
 data-item-custom12-name="Last Name"
@@ -28,7 +28,7 @@ data-item-custom18-name="Book From (Mom & Dad"
 data-item-custom19-name="Date of Gift"
 data-item-custom20-name="Gender"
 data-item-custom20-options="Please select|Boy|Girl"
-data-item-categories="books|children">
+data-item-categories="niks-n-knacks|jewelry">
 Add to cart ${{page.price}}
 </button>
 

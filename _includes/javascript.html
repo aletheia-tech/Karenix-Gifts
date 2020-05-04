@@ -1,8 +1,15 @@
 <script src="https://cdn.snipcart.com/themes/v3.0.12/default/snipcart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
 <script>
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+  const coolImage = document.querySelector('.image-to-load-first')
+  // ... trigger the load of a image before it appears on the viewport
+  observer.triggerLoad(coolImage);
+
   function getYear() {
     var d = new Date();
     var n = d.getFullYear();
