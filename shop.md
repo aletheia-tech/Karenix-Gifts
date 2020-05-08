@@ -10,15 +10,16 @@ permalink: /shop/
   <div class="w-1/2 bg-gray-400 h-32"><a href="{{ product.url }}">{{ product.title }}</a></div>
   {% endfor %}
 </div>-->
-<div class="container bg-gray-100 mx-6 mt-6 mx-auto p-4">
-<h1 class="text-center text-xl text-blue-700 tracking-wider" >Customizable Books</h1>
+
+<div class="container mx-6 mt-6 p-8 mx-auto">
+<h1 class="text-center text-2xl text-blue-700 tracking-wider">Customizable Books</h1>
 </div>
 
 <div class="flex flex-wrap min-w-0 max-w-full lg:px-16 p-4 justify-evenly">
   {% assign custom-books = site.products | where: "categories", "custom-books" %}
   {% for product in custom-books %}
   <div class="w-64 px-3 bg">
-    <div class="bg-white rounded-lg my-4 overflow-hidden border shadow-lg">
+    <div class="bg-white rounded-lg my-4 overflow-hidden border shadow-md">
       <div>
       <a data-fancybox="gallery" href="{{ product.image_path }}"><img class="h-48 w-full object-cover object-top lozad image-to-load-first" src="{{ product.image_path }}" data-src="{{ product.image_path }}"></a>
       </div>
@@ -35,8 +36,8 @@ permalink: /shop/
 {% endfor %}
 </div>
 
-<div class="container mx-auto bg-gray-100 mx-auto my-6 p-4">
-<h1 class="text-center text-xl text-blue-700 tracking-wider" >Niks n' Knacks</h1>
+<div class="container mx-6 mt-6 p-8 mx-auto">
+<h1 class="text-center text-2xl text-blue-700 tracking-wider">Niks n' Knacks</h1>
 </div>
 
 <div class="flex flex-wrap min-w-0 max-w-full lg:px-16 p-4 justify-evenly">

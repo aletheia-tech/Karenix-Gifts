@@ -1,48 +1,36 @@
-<header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 sticky absolute top-0 border-b border-indigo-100">
-  <div class="flex-1 flex justify-between items-center">
-    <a href="{{ site.url }}" class="text-blue-600">
-      {{ site.title }}
+<!-- NEW HEADER REPLACEMENT -->
+
+<header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+  <div class="flex items-center justify-between px-4 py-3 sm:p-0">
+    <div>
+      <!-- Navigation Start Left Side-->
+      <a href="{{ site.url }}"><img class="h-10 sm:p-0" src="/images/karenix-svgomg.svg" alt="Karenix"></a>
+      <!-- Navigation End Left Side-->
+    </div>
+    <div class="sm:hidden">
+      <!-- Navigation Start Right Side-->
+      <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none" onclick="toggleLinks()">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <!-- Burger -->
+          <path v-if="!isOpen" fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+          <!-- X -->
+          <path v-if="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+        </svg>
+      </button>
+      <!-- Navigation End Right Side-->
+    </div>
+  </div>
+
+  <div v-bind:class="[isOpen ? 'block' : 'hidden']" class="px-2 pt-2 pb-4 sm:flex">
+    <a href="{{ site.url }}/shop" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Shop</a>
+    <a href="{{ site.url }}/about" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">About</a>
+    <a href="{{ site.url }}/shipping" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Deliveries</a>
+    <a href="{{ site.url }}/contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Contact</a>
+    <a href="#" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2 snipcart-checkout">Cart
+      <span class="snipcart-total-price">$0.00</span>
+      (<span class="snipcart-items-count">0</span>)
     </a>
   </div>
 
-  <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900"
-      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-    </svg>
-  </label>
-
-  <input class="hidden" type="checkbox" id="menu-toggle" />
-
-  <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
-    <nav>
-      <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
-            href="{{ site.url }}/shop">Shop</a>
-        </li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
-            href="{{ site.url }}//about">About</a>
-        </li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400"
-            href="{{ site.url }}//shipping">Shipping Areas</a></li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2"
-            href="{{ site.url }}//contact">Contact</a></li>
-        <li>
-          <button
-            class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 lg:mb-0 mb-2 snipcart-customer-signin">My
-            account</button>
-        </li>
-        <li>
-          <button
-            class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 bg-transparent text-blue-700 font-semibold hover:text-blue-800 py-2 snipcart-checkout"
-            type="submit">Cart
-            <span class="snipcart-total-price">$0.00</span>
-            (<span class="snipcart-items-count">0</span>)
-          </button>
-        </li>
-        <li>
-          <svg class="snipcart-checkout fill-current text-indigo-500 h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M17 16a3 3 0 11-2.83 2H9.83a3 3 0 11-5.62-.1A3 3 0 015 12V4H3a1 1 0 110-2h3a1 1 0 011 1v1h14a1 1 0 01.9 1.45l-4 8a1 1 0 01-.9.55H5a1 1 0 000 2h12zM7 12h9.38l3-6H7v6zm0 8a1 1 0 100-2 1 1 0 000 2zm10 0a1 1 0 100-2 1 1 0 000 2z"/></svg>
-        </li>
-      </ul>
-    </nav>
-  </div>
 </header>

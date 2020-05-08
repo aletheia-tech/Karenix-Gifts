@@ -5,6 +5,8 @@ permalink:
 excerpt_separator: <!--more-->
 ---
 
+<!--<input type="text" id="input" v-model="message">-->
+
 {% for post in site.posts %}
   <div class="px-4">
     <div class="max-w-3xl bg-white rounded-lg mx-auto my-16 p-16">
