@@ -1,10 +1,10 @@
 <!-- NEW HEADER REPLACEMENT -->
 
-<header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+<header class="bg-indigo-700 sm:flex sm:justify-between sm:items-center sm:px-5 sm:py-3">
   <div class="flex items-center justify-between px-4 py-3 sm:p-0">
     <div>
       <!-- Navigation Start Left Side-->
-      <a href="{{ site.url }}"><img class="h-10 sm:p-0" src="/images/karenix-svgomg.svg" alt="Karenix"></a>
+      <a href="{{ site.url }}"><img class="h-10" src="/images/karenix-svgomg.svg" alt="Karenix"></a>
       <!-- Navigation End Left Side-->
     </div>
     <div class="sm:hidden">
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div v-bind:class="[isOpen ? 'block' : 'hidden']" class="px-2 pt-2 pb-4 sm:flex">
+  <div v-bind:class="[isOpen ? 'block' : 'hidden']" class="pt-2 pb-4 sm:flex">
     <a href="{{ site.url }}/shop" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Shop</a>
     <a href="{{ site.url }}/about" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">About</a>
     <a href="{{ site.url }}/shipping" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Deliveries</a>

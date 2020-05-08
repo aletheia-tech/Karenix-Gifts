@@ -3,6 +3,11 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    extend: {
+      colors: {
+        'karenix-blue': '#161da3',
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
