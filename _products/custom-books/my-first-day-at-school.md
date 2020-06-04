@@ -5,13 +5,14 @@ image_path: ../../../images/custom-books/my-first-day-at-school.jpg
 category: custom-books
 permalink: /products/custom-books/my-first-day-at-school/
 description: For ages 3-6. This is a quality hard-cover personalized children's book. Washable hard covers. Fully illustrated color pages. 36 pages.
-price: 19.99
+price_usd: 19.99
+price_ttd: 120
 excerpt_separator: <!--more-->
 ---
 
 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded w-full snipcart-add-item" 
 data-item-id="my-first-day-at-school" 
-data-item-price="{{page.price}}"
+data-item-price="{{page.price_usd}}"
 data-item-url="https://www.karenix.com/shop"
 data-item-description="{{ page.description }}"
 data-item-image="{{page.image_path}}"
@@ -30,7 +31,7 @@ data-item-custom19-name="Date of Gift"
 data-item-custom20-name="Gender"
 data-item-custom20-options="Please select|Boy|Girl"
 data-item-categories="books|children">
-Add to cart ${{page.price}}
+${{page.price_usd}} USD or ${{page.price_ttd}} TTD
 </button>
 
 <!--more-->

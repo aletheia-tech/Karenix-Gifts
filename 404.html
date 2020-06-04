@@ -1,25 +1,16 @@
 ---
 layout: tailwind
+title: I'm sorry Dave...
 permalink: /404.html
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="px-4 flex">
+  <div class="max-w-3xl bg-white rounded-lg mx-auto my-16 p-16">
+    <h1 class="text-2xl font-medium mb-2 flex justify-center">{{ page.title }}</h1>
+    <h2 class="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide flex justify-center">Page not found</h2>
+    <img class="flex justify-center" src="https://media.giphy.com/media/giKdkKxdDWecg524cE/giphy.gif">
+    <p class="text-gray-500 text-xs flex justify-center">
+      The requested page could not be found. Image via GIPHY.
+    </p>
+  </div>
 </div>

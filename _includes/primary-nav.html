@@ -1,6 +1,10 @@
 <!-- NEW HEADER REPLACEMENT -->
 
-<header class="bg-indigo-700 sm:flex sm:justify-between sm:items-center sm:px-5 sm:py-3">
+<div class="p-1 bg-red-500 text-white justify-center flex" >
+  We're sorry, however we're still testing and getting our content ready.
+</div>
+
+<header class="bg-indigo-700 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 sm:sticky sm:top-0">
   <div class="flex items-center justify-between px-4 py-3 sm:p-0">
     <div>
       <!-- Navigation Start Left Side-->
@@ -9,13 +13,15 @@
     </div>
     <div class="sm:hidden">
       <!-- Navigation Start Right Side-->
-      <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none" onclick="toggleLinks()">
+      <button @click="isOpen = !isOpen" type="button"
+        class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
           <!-- Burger -->
           <path v-if="!isOpen" fill-rule="evenodd"
             d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
           <!-- X -->
-          <path v-if="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+          <path v-if="isOpen" fill-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
         </svg>
       </button>
       <!-- Navigation End Right Side-->
@@ -23,14 +29,78 @@
   </div>
 
   <div v-bind:class="[isOpen ? 'block' : 'hidden']" class="pt-2 pb-4 sm:flex">
-    <a href="{{ site.url }}/shop" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Shop</a>
-    <a href="{{ site.url }}/about" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">About</a>
-    <a href="{{ site.url }}/shipping" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Deliveries</a>
-    <a href="{{ site.url }}/contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Contact</a>
-    <a href="#" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2 snipcart-checkout">Cart
+    <!--<a href="{{ site.url }}/shop" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Shop</a>-->
+    <a href="{{ site.url }}/blog" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Blog</a>
+    <a href="{{ site.url }}/food" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Food</a>
+    <a href="{{ site.url }}/about"
+      class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">About</a>
+    <!--<a href="{{ site.url }}/shipping"
+      class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Deliveries</a>-->
+    <a href="{{ site.url }}/contact"
+      class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Contact</a>
+    <a href="#"
+      class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2 snipcart-checkout">Cart
       <span class="snipcart-total-price">$0.00</span>
       (<span class="snipcart-items-count">0</span>)
     </a>
-  </div>
 
+    <!-- DROPDOWN DESKTOP -->
+    <div class="relative hidden sm:block sm:ml-3">
+      <div>
+        <button @click="isDropdownOpen = !isDropdownOpen"
+          class="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-indigo-400 focus:outline-none focus:border-white">
+          <img class="h-full w-full object-cover"
+            src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1448&q=80"
+            alt="Gift">
+        </button>
+        <button v-if="isDropdownOpen" @click="isDropdownOpen = !isDropdownOpen" tabindex="-1"
+          class="fixed inset-0 h-full w-full bg-black opacity-50 cursor-default"></button>
+      </div>
+      <div v-if="isDropdownOpen" class="absolute right-0 top-auto mt-2 w-48 py-2 bg-white rounded-lg shadow-xl">
+        <a href="/baby/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Baby</a>
+        <a href="/customizable-books/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Customizable Books</a>
+        <a href="/day-brighteners/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Day Brighteners</a>
+        <a href="/dolls/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Dolls</a>
+        <a href="/drinkware/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Drinkware</a>
+        <a href="/gifts-for-men/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Gifts for Men</a>
+        <a href="/home-decor/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Home Decor</a>
+        <a href="/inspirational-gifts/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Inspirational Gifts</a>
+        <a href="/novelty-items/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Novelty Items</a>
+        <a href="/pens/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Pens</a>
+        <a href="/plaques/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Plaques</a>
+        <a href="/serveware/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Serveware</a>
+        <a href="/stuffed-toys/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Stuffed Toys</a>
+        <a href="/bath-and-body/" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Unisex Bath & Body</a>
+      </div>
+    </div>
+
+    <!-- DROPDOWN MOBILE -->
+    <div class="px-2 py-5 sm:hidden">
+      <div>
+        <div class="pt-5 border-t border-gray-100 border-opacity-25 flex items-center">
+          <img class="h-8 w-8 border-2 border-indigo-400 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1448&q=80"
+            alt="Gift">
+            <span class="ml-3 font-semi-bold text-white">Gift Categories</span>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a href="/baby" class="block text-gray-400 hover:text-white">Baby</a>
+        <a href="/customizable-books/" class="mt-2 block text-gray-400 hover:text-white">Customizable Books</a>
+        <a href="/day-brighteners/" class="mt-2 block text-gray-400 hover:text-white">Day Brighteners</a>
+        <a href="/dolls/" class="mt-2 block text-gray-400 hover:text-white">Dolls</a>
+        <a href="/drinkware/" class="mt-2 block text-gray-400 hover:text-white">Drinkware</a>
+        <a href="/gifts-for-men/" class="mt-2 block text-gray-400 hover:text-white">Gifts for Men</a>
+        <a href="/home-decor/" class="mt-2 block text-gray-400 hover:text-white">Home Decor</a>
+        <a href="/inspirational-gifts/" class="mt-2 block text-gray-400 hover:text-white">Inspirational Gifts</a>
+        <a href="/novelty-items/" class="mt-2 block text-gray-400 hover:text-white">Novelty Items</a>
+        <a href="/pens/" class="mt-2 block text-gray-400 hover:text-white">Pens</a>
+        <a href="/plaques/" class="mt-2 block text-gray-400 hover:text-white">Plaques</a>
+        <a href="/serveware/" class="mt-2 block text-gray-400 hover:text-white">Serveware</a>
+        <a href="/stuffed-toys/" class="mt-2 block text-gray-400 hover:text-white">Stuffed Toys</a>
+        <a href="/bath-and-body/" class="mt-2 block text-gray-400 hover:text-white">Unisex Bath & Body</a>
+      </div>
+    </div>
+
+  </div>
 </header>

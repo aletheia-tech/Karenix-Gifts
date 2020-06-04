@@ -25,7 +25,19 @@
   new Vue({
     el: '#root',
     data: {
-      isOpen: false
+      isOpen: false,
+      isDropdownOpen: false
+    },
+    created() {
+      const handleEscape = (e) => {
+        if (e.key === 'Esc' || e.key === 'Escape') {
+          this.isDropdownOpen = false
+        }
+      }
+      document.addEventListener('keydown', handleEscape)
+      this.$once('hook:beforeDestroy', () => {
+        document.removeEventListener('keydown', handleEscape)
+      })
     }
   })
 </script>
