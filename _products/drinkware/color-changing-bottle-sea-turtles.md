@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Sea Turtles
 item-id: color-changing-bottle-sea-turtles
-image_path: ../../../images/drinkware/color-changing-bottle-sea-turtles.jpg
+image_path: ../../../images/drinkware/seas-the-day.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-sea-turtles/
 description: ""

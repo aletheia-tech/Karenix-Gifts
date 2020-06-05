@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Fintastic Fish
 item-id: color-changing-bottle-fintastic-fish
-image_path: ../../../images/drinkware/color-changing-bottle-fintastic-fish.jpg
+image_path: ../../../images/drinkware/feeling-finstastic.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-fintastic-fish/
 description: ""

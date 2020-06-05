@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Live with Porpoise
 item-id: color-changing-bottle-live-with-porpoise
-image_path: ../../../images/drinkware/color-changing-bottle-live-with-porpoise.jpg
+image_path: ../../../images/drinkware/live-with-porpoise.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-live-with-porpoise/
 description: ""

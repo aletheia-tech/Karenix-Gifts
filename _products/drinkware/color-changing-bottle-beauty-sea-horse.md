@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Beauty Sea Horse
 item-id: color-changing-bottle-beauty-sea-horse
-image_path: ../../../images/drinkware/color-changing-bottle-beauty-sea-horse.jpg
+image_path: ../../../images/drinkware/sea-life-beauty.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-beauty-sea-horse/
 description: ""

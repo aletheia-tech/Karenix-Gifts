@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Shellebrate Shells
 item-id: color-changing-bottle-shellebrate-shells
-image_path: ../../../images/drinkware/color-changing-bottle-shellebrate-shells.jpg
+image_path: ../../../images/drinkware/shellebrate-today.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-shellebrate-shells/
 description: ""

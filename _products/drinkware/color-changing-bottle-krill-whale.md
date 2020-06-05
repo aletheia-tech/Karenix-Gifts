@@ -2,7 +2,7 @@
 layout: product
 title: Color Changing Bottle - Krill Whale
 item-id: color-changing-bottle-krill-whale
-image_path: ../../../images/drinkware/color-changing-bottle-krill-whale.jpg
+image_path: ../../../images/drinkware/dont-krill-my-vibe.jpg
 category: drinkware
 permalink: /products/drinkware/color-changing-bottle-krill-whale/
 description: ""

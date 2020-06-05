@@ -2,7 +2,7 @@
 layout: product
 title: Travel Mug Sunshine
 item-id: travel-mug-sunshine
-image_path: ../../../images/drinkware/travel-mug-sunshine.jpg
+image_path: ../../../images/drinkware/good-morning-sunshine.jpg
 category: drinkware
 permalink: /products/drinkware/travel-mug-sunshine/
 description: ""

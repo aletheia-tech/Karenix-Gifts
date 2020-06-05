@@ -6,7 +6,7 @@ category: custom-books
 permalink: /products/custom-books/my-book-of-prayers/
 description: For ages 1-4. This is a quality hard-cover personalized children's book. Washable hard covers. Fully illustrated color pages. 36 pages.
 price_usd: 19.99
-price_ttd: 120
+price_ttd: 135
 excerpt_separator: <!--more-->
 ---
 

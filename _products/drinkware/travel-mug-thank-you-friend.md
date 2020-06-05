@@ -2,7 +2,7 @@
 layout: product
 title: Travel Mug - Thank You Friend
 item-id: travel-mug-thank-you-friend
-image_path: ../../../images/drinkware/travel-mug-thank-you-friend.jpg
+image_path: ../../../images/drinkware/thank-you-for-being-a-friend.jpg
 category: drinkware
 permalink: /products/drinkware/travel-mug-thank-you-friend/
 description: ""

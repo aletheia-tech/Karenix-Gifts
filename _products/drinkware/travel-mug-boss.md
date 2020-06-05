@@ -2,7 +2,7 @@
 layout: product
 title: Travel Mug Boss
 item-id: travel-mug-boss
-image_path: ../../../images/drinkware/travel-mug-boss.jpg
+image_path: ../../../images/drinkware/the-boss.jpg
 category: drinkware
 permalink: /products/drinkware/travel-mug-boss/
 description: ""

@@ -2,7 +2,7 @@
 layout: product
 title: Travel Mug Queen
 item-id: travel-mug-queen
-image_path: ../../../images/drinkware/travel-mug-queen.jpg
+image_path: ../../../images/drinkware/its-good-to-be-queen.jpg
 category: drinkware
 permalink: /products/drinkware/travel-mug-queen/
 description: ""
